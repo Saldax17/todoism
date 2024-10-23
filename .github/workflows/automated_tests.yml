@@ -44,7 +44,7 @@ jobs:
       
       - name: Install tests deps
         run: |
-          cd autotodoism
+          cd autoism
           npm ci
       
       - name: Install Playwright Browsers
@@ -52,7 +52,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          cd autotodoism
+          cd autoism
           npx playwright test todolist.spec.ts
 
       - name: Upload Artifact
