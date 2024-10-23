@@ -27,11 +27,18 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
       
+      - name: Run Flask app
+        run: |
+          source venv/bin/activate
+          flask initdb
+          flask translate compile
+          nohup flask run > flask.log 2>&1 &
+                
       - name: Checkout test repo
         run: git clone https://github.com/Saldax17/autotodoism.git
       
       - name: Setup Node
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
       
