@@ -40,11 +40,11 @@ jobs:
           cd autotodoism
           npm ci
       
-      - name: Install Browsers
+      - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: 
+        run: |
           cd autotodoism
           npx playwright test todolist.spec.ts
 
