@@ -53,5 +53,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: $WORKING_DIR/playwright-report/
+          path: autoism/playwright-report/
           retention-days: 30
