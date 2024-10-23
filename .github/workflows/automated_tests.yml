@@ -35,7 +35,7 @@ jobs:
           nohup flask run > flask.log 2>&1 &
                 
       - name: Checkout test repo
-        run: git clone https://github.com/Saldax17/autotodoism.git
+        run: git clone https://github.com/Saldax17/autoism.git
       
       - name: Setup Node
         uses: actions/setup-node@v4
